@@ -40,7 +40,6 @@ public class Main {
 
         for (Course course : courses) {
             course.conductExam();
-            // Collect exams from each student
             for (Student student : course.getEnrolledStudents()) {
                 if (!student.getGrades().isEmpty()) {
                     exams.add(new Exam(student, course.getInstructor(),
