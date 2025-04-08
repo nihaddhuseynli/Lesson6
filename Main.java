@@ -51,13 +51,8 @@ public class Main {
 
         try {
             ObjectMapper mapper = new ObjectMapper();
-            // Configure ObjectMapper to handle Java 8 dates if needed
             mapper.findAndRegisterModules();
-
-            // Pretty print JSON
             mapper.enable(SerializationFeature.INDENT_OUTPUT);
-
-            // Write to files
             mapper.writeValue(new File("students.json"), students);
             mapper.writeValue(new File("teachers.json"), teachers);
             mapper.writeValue(new File("courses.json"), courses);
